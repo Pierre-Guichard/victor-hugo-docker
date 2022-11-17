@@ -1,0 +1,23 @@
+{{ define "main" }}
+
+<article>
+    <header>
+        <div>
+            <h1>{{ .Title }}</h1>
+            <p id="description">Description modif</p>
+        </div>
+        <div id="meta">
+            <ul>
+                {{ range .Params.Tags }}
+                <li>{{ . }}</li>
+                {{ end }}
+            </ul>
+        </div>
+    </header>
+    {{ .Content }}
+</article>
+
+
+
+
+{{ end }}
