@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  web:
+    build:
+      context: ./
+      target: dev
+    volumes:
+      - ".:/src"
+    entrypoint: npm run preview
+    environment:
+      - HUGO_ENV=DEV
+    ports:
+      - "3000:3000"

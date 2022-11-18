@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  web:
+    build:
+      context: ./
+      target: prod
+    # entrypoint: npm run start
+    ports:
+      - "80:80"
